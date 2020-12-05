@@ -1,18 +1,48 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "Roboto Mono" :size 18 :weight 'light)
+(setq doom-font (font-spec :family "Roboto Mono" :weight 'light)
       doom-variable-pitch-font (font-spec :family "Avenir")
       doom-unicode-font (font-spec :family "MesloLGM Nerd Font Mono"))
 
 (delq! 'special-mode global-hl-line-modes)
 
-(setq doom-theme 'modus-operandi)
+(setq doom-theme 'doom-opera)
 (setq display-line-numbers-type 'relative)
 
 (setq user-full-name "Michael Lan"
       user-mail-address "michaellan202@gmail.com")
 
 (map! :leader "SPC" #'counsel-M-x )
+
+(defun bird-banner ()
+  (mapc (lambda (line)
+          (insert (propertize (+doom-dashboard--center +doom-dashboard--width line)
+                              'face 'doom-dashboard-banner) " ")
+          (insert "\n"))
+        '("               _.----._                 "
+          "             ,'.::.--..:._              "
+          "            /::/_,-<o)::;_`-._          "
+          "           ::::::::`-';'`,--`-`         "
+          "           ;::;'|::::,','               "
+          "         ,'::/  ;:::/, :.               "
+          "        /,':/  /::;' \\ ':\\              "
+          "       :'.:: ,-''   . `.::\             "
+          "       \\.:;':.    `    :: .:            "
+          "       (;' ;;;       .::' :|            "
+          "        \\,:;;      \\ `::.\\.\\            "
+          "        `);'        '::'  `:            "
+          "         \\.  `        `'  .:      _,'   "
+          "          `.: ..  -. ' :. :/  _.-'  .-  "
+          "            >;._.:._.;,-=_(.-'  __.`._  "
+          "          ,;'  _..-((((''  .,-''  `-._  "
+          "       _,'<.-''  _..``'.'`-'`.        ` "
+          "   _.-((((_..--''       \\ \\ `.`.        "
+          " -', _.``'               \\      `       "
+          " _ ,'                                   "
+          "                                        "
+          "               doom emacs               "
+          "                                        ")))
+(setq +doom-dashboard-ascii-banner-fn #'bird-banner)
 
 ;; --- NOTE LSP
 
@@ -32,6 +62,8 @@
 
 (setq org-directory "~/org/")
 (setq org-superstar-headline-bullets-list '("❖" "◉" "◈" "○" "⁘"))
+(setq org-ellipsis " ○")
+(setq org-hide-emphasis-markers t)
 
 ;; --- END ORG
 
