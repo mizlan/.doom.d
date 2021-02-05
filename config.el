@@ -28,13 +28,3 @@
 (setq org-superstar-headline-bullets-list '("❖" "◉" "◈" "○" "⁘"))
 (setq org-ellipsis " ▼")
 (setq org-hide-emphasis-markers t)
-
-;; (setq +mu4e-mu4e-mail-path "~/.mail")
-;; (set-email-account! "michaellan202@gmail.com"
-;;                     '((mu4e-sent-folder       . "/gmail/Sent Mail")
-;;                       (mu4e-drafts-folder     . "/gmail/Drafts")
-;;                       (mu4e-trash-folder      . "/gmail/Trash")
-;;                       (mu4e-refile-folder     . "/gmail/All Mail")
-;;                       (smtpmail-smtp-user     . "michaellan202@gmail.com")
-;;                       (mu4e-compose-signature . "---\nMichael Lan"))
-;;                     t)
