@@ -5,7 +5,6 @@
 
 (delq! 'special-mode global-hl-line-modes)
 
-(setq doom-theme 'doom-spacegrey)
 (setq doom-theme 'doom-monokai-pro)
 (setq display-line-numbers-type 'relative)
 
