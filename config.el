@@ -23,6 +23,9 @@
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 (setq lsp-julia-default-environment "~/.julia/environments/v1.5")
 
+(setq company-idle-delay 0.0)
+(setq company-minimum-prefix-length 1)
+
 (setq org-directory "~/org/")
 (setq org-superstar-headline-bullets-list '("❖" "◉" "◈" "○" "⁘"))
 (setq org-ellipsis " ▼")
