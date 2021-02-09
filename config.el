@@ -30,3 +30,5 @@
 (setq org-superstar-headline-bullets-list '("❖" "◉" "◈" "○" "⁘"))
 (setq org-ellipsis " ▼")
 (setq org-hide-emphasis-markers t)
+
+(setq ivy-posframe-border-width 20)
