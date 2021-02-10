@@ -15,11 +15,12 @@
 
 (setq lsp-enable-folding t)
 (setq lsp-folding-range-limit 100)
-(setq lsp-clients-clangd-args '("-j=3"
-                                "--background-index"
-                                "--clang-tidy"
-                                "--completion-style=detailed"
-                                "--header-insertion=iwyu"))
+(setq lsp-clients-clangd-args
+      '("-j=3"
+        "--background-index"
+        "--clang-tidy"
+        "--completion-style=detailed"
+        "--header-insertion=iwyu"))
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 (setq lsp-julia-default-environment "~/.julia/environments/v1.5")
 
