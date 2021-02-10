@@ -33,3 +33,5 @@
 (setq org-hide-emphasis-markers t)
 
 (setq ivy-posframe-border-width 20)
+
+(setq evil-snipe-scope 'visible)
