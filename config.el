@@ -1,7 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq doom-font (font-spec :family "Roboto Mono")
-      doom-variable-pitch-font (font-spec :family "Roboto"))
+      doom-variable-pitch-font (font-spec :family "Helvetica Neue"))
 
 (delq! 'special-mode global-hl-line-modes)
 
