@@ -43,3 +43,8 @@
 (add-hook! 'elfeed-search-mode-hook 'elfeed-update)
 (after! elfeed
   (setq elfeed-search-filter "@1-month-ago"))
+
+(add-hook! 'writeroom-mode-hook
+  (if writeroom-mode
+      (add-hook 'post-command-hook #'recenter nil t)
+    (remove-hook 'post-command-hook #'recenter t)))
