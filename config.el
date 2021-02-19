@@ -39,3 +39,7 @@
 (setq ivy-posframe-border-width 20)
 
 (setq evil-snipe-scope 'visible)
+
+(add-hook! 'elfeed-search-mode-hook 'elfeed-update)
+(after! elfeed
+  (setq elfeed-search-filter "@1-month-ago"))
