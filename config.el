@@ -5,7 +5,7 @@
 
 (delq! 'special-mode global-hl-line-modes)
 
-(setq doom-theme 'doom-monokai-pro)
+(setq doom-theme 'doom-ayu-light)
 (setq display-line-numbers-type 'relative)
 
 (setq user-full-name "Michael Lan"
