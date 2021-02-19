@@ -24,7 +24,6 @@
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 (setq lsp-julia-default-environment "~/.julia/environments/v1.5")
 
-;; faster complete
 (setq-hook! 'clojure-mode-hook
   company-idle-delay 0.0
   company-minimum-prefix-length 1)
