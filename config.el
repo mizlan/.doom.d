@@ -25,7 +25,7 @@
 (setq lsp-julia-default-environment "~/.julia/environments/v1.5")
 
 (setq-hook! 'clojure-mode-hook
-  company-idle-delay 0.0
+  company-idle-delay 0.1
   company-minimum-prefix-length 1)
 
 (setq company-idle-delay 0.3)
