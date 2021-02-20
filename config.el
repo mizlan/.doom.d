@@ -5,7 +5,7 @@
 
 (delq! 'special-mode global-hl-line-modes)
 
-(setq doom-theme 'doom-ayu-light)
+(setq doom-theme 'doom-flatwhite)
 (setq display-line-numbers-type 'relative)
 
 (setq user-full-name "Michael Lan"
@@ -36,7 +36,7 @@
 (setq org-ellipsis " ▼")
 (setq org-hide-emphasis-markers t)
 
-(setq ivy-posframe-border-width 20)
+(setq ivy-posframe-border-width 30)
 
 (setq evil-snipe-scope 'visible)
 
