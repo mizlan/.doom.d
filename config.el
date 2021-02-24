@@ -48,5 +48,10 @@
   (if writeroom-mode
       (add-hook 'post-command-hook #'recenter nil t)
     (remove-hook 'post-command-hook #'recenter t)))
+
 ;; (setq! lispyville-key-theme
 ;;        '(slurp/barf-lispy))
+
+(setq doom-themes-treemacs-enable-variable-pitch nil)
+
+(setq nav-flash-use-pulse t)
