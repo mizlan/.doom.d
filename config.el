@@ -55,3 +55,17 @@
 (setq doom-themes-treemacs-enable-variable-pitch nil)
 
 (setq nav-flash-use-pulse t)
+
+(set-popup-rule! "^\\*compilation" :side 'right :size 0.433)
+
+(defun compile-and-run-cpp ()
+  (interactive)
+  (save-buffer)
+  (compile (concat "g++ -std=c++17 -Wshadow -Wall -DNOAM_LOCAL "
+                   (file-name-nondirectory (buffer-file-name))
+                   " -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./a.out") t)
+  (interactive)
+  (evil-window-right 1))
+
+(add-hook 'c++-mode-hook
+          (lambda () (local-set-key (kbd "<f9>") #'compile-and-run)))
