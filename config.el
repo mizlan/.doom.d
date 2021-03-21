@@ -6,7 +6,7 @@
 (delq! 'special-mode global-hl-line-modes)
 
 (setq doom-theme 'doom-flatwhite)
-(setq display-line-numbers-type 'relative)
+(setq display-line-numbers-type nil)
 
 (setq user-full-name "Michael Lan"
       user-mail-address "michaellan202@gmail.com")
