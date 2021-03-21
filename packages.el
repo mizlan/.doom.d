@@ -11,3 +11,5 @@
 ;; (package! emacs-everywhere :recipe (:host github :repo "tecosaur/emacs-everywhere"))
 
 (unpin! doom-themes)
+
+(package! keycast :pin "a3a0798349...")
