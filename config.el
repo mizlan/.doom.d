@@ -23,20 +23,17 @@
         "--header-insertion=iwyu"))
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 (setq lsp-julia-default-environment "~/.julia/environments/v1.5")
-
 (setq-hook! 'clojure-mode-hook
   company-idle-delay 0.1
   company-minimum-prefix-length 1)
 
-(setq company-idle-delay 0.3)
-(setq company-minimum-prefix-length 2)
 
 (setq org-directory "~/org/")
 (setq org-superstar-headline-bullets-list '("❖" "◉" "◈" "○" "⁘"))
 (setq org-ellipsis " ▼")
 (setq org-hide-emphasis-markers t)
 
-(setq ivy-posframe-border-width 30)
+;; (setq ivy-posframe-border-width 30)
 
 (setq evil-snipe-scope 'visible)
 
@@ -44,28 +41,33 @@
 (after! elfeed
   (setq elfeed-search-filter "@1-month-ago"))
 
-(add-hook! 'writeroom-mode-hook
-  (if writeroom-mode
-      (add-hook 'post-command-hook #'recenter nil t)
-    (remove-hook 'post-command-hook #'recenter t)))
-
-;; (setq! lispyville-key-theme
-;;        '(slurp/barf-lispy))
-
 (setq doom-themes-treemacs-enable-variable-pitch nil)
 
-(setq nav-flash-use-pulse t)
+; (setq nav-flash-use-pulse t)
 
-(set-popup-rule! "^\\*compilation" :side 'right :size 0.433)
+(after! company
+  (setq company-idle-delay 0.1)
+  (setq company-minimum-prefix-length 1)
+  (setq company-require-match nil)
+  (setq company-frontends '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
+                            company-preview-frontend))
+  (define-key company-active-map (kbd "<tab>") 'company-complete-selection))
 
-(defun compile-and-run-cpp ()
-  (interactive)
-  (save-buffer)
-  (compile (concat "g++ -std=c++17 -Wshadow -Wall -DNOAM_LOCAL "
-                   (file-name-nondirectory (buffer-file-name))
-                   " -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./a.out") t)
-  (interactive)
-  (evil-window-right 1))
-
-(add-hook 'c++-mode-hook
-          (lambda () (local-set-key (kbd "<f9>") #'compile-and-run)))
+(use-package! keycast
+  :commands keycast-mode
+  :config
+  (define-minor-mode keycast-mode
+    "Show current command and its key binding in the mode line."
+    :global t
+    (if keycast-mode
+        (progn
+          (add-hook 'pre-command-hook 'keycast--update t)
+          (add-to-list 'global-mode-string '("" mode-line-keycast " ")))
+      (remove-hook 'pre-command-hook 'keycast--update)
+      (setq global-mode-string (remove '("" mode-line-keycast " ") global-mode-string))))
+  (custom-set-faces!
+    '(keycast-command :inherit doom-modeline-debug
+                      :height 0.9)
+    '(keycast-key :inherit custom-modified
+                  :height 1.1
+                  :weight bold)))
