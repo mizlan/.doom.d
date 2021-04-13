@@ -5,7 +5,7 @@
 
 (delq! 'special-mode global-hl-line-modes)
 
-(setq doom-theme 'doom-flatwhite)
+(setq doom-theme 'doom-zenburn)
 (setq display-line-numbers-type nil)
 
 (setq user-full-name "Michael Lan"
@@ -21,19 +21,25 @@
         "--clang-tidy"
         "--completion-style=detailed"
         "--header-insertion=iwyu"))
+
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
+
 (setq lsp-julia-default-environment "~/.julia/environments/v1.5")
+
 (setq-hook! 'clojure-mode-hook
   company-idle-delay 0.1
   company-minimum-prefix-length 1)
 
+(custom-set-faces!
+  '(mode-line :family "Roboto Mono" :height 0.9)
+  '(mode-line-inactive :family "Roboto Mono" :height 0.9))
+
+(setq doom-modeline-height 20)
 
 (setq org-directory "~/org/")
 (setq org-superstar-headline-bullets-list '("❖" "◉" "◈" "○" "⁘"))
 (setq org-ellipsis " ▼")
 (setq org-hide-emphasis-markers t)
-
-;; (setq ivy-posframe-border-width 30)
 
 (setq evil-snipe-scope 'visible)
 
@@ -42,16 +48,6 @@
   (setq elfeed-search-filter "@1-month-ago"))
 
 (setq doom-themes-treemacs-enable-variable-pitch nil)
-
-; (setq nav-flash-use-pulse t)
-
-(after! company
-  (setq company-idle-delay 0.1)
-  (setq company-minimum-prefix-length 1)
-  (setq company-require-match nil)
-  (setq company-frontends '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
-                            company-preview-frontend))
-  (define-key company-active-map (kbd "<tab>") 'company-complete-selection))
 
 (use-package! keycast
   :commands keycast-mode
@@ -71,3 +67,5 @@
     '(keycast-key :inherit custom-modified
                   :height 1.1
                   :weight bold)))
+
+(blink-cursor-mode)
