@@ -13,6 +13,7 @@
       user-mail-address "michaellan202@gmail.com")
 
 (map! :leader "SPC" #'counsel-M-x )
+(map! "C-/" #'imenu)
 
 (setq lsp-enable-folding t)
 (setq lsp-folding-range-limit 100)
