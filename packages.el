@@ -8,3 +8,4 @@
 (package! keycast :pin "a3a0798349...")
 (package! graphql-mode)
 (unpin! doom-themes)
+(package! solaire-mode :disable t)
