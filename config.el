@@ -33,8 +33,8 @@
   company-minimum-prefix-length 1)
 
 (custom-set-faces!
-  '(mode-line :family "Roboto Mono" :height 0.9)
-  '(mode-line-inactive :family "Roboto Mono" :height 0.9))
+  '(mode-line :family "Roboto Mono" :height 0.7)
+  '(mode-line-inactive :family "Roboto Mono" :height 0.7))
 
 (setq doom-modeline-height 20)
 
