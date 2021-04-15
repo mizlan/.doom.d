@@ -5,7 +5,7 @@
 
 (delq! 'special-mode global-hl-line-modes)
 
-(setq doom-theme 'doom-gruvbox-light)
+(setq doom-theme 'modus-operandi)
 (setq doom-gruvbox-light-brighter-modeline t)
 (setq display-line-numbers-type nil)
 

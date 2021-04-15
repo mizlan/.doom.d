@@ -7,5 +7,6 @@
 (package! lsp-julia :recipe (:host github :repo "non-jedi/lsp-julia"))
 (package! keycast :pin "a3a0798349...")
 (package! graphql-mode)
+(package! modus-themes)
 (unpin! doom-themes)
 (package! solaire-mode :disable t)
