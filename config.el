@@ -5,7 +5,8 @@
 
 (delq! 'special-mode global-hl-line-modes)
 
-(setq doom-theme 'doom-zenburn)
+(setq doom-theme 'doom-gruvbox-light)
+(setq doom-gruvbox-light-brighter-modeline t)
 (setq display-line-numbers-type nil)
 
 (setq user-full-name "Michael Lan"
