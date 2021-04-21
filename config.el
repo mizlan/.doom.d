@@ -6,7 +6,6 @@
 (delq! 'special-mode global-hl-line-modes)
 
 (setq doom-theme 'modus-operandi)
-(setq doom-gruvbox-light-brighter-modeline t)
 (setq display-line-numbers-type nil)
 
 (setq user-full-name "Michael Lan"
