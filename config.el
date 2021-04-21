@@ -33,10 +33,10 @@
   company-minimum-prefix-length 1)
 
 (custom-set-faces!
-  '(mode-line :family "Roboto Mono" :height 0.7)
-  '(mode-line-inactive :family "Roboto Mono" :height 0.7))
+  '(mode-line :family "Roboto Mono" :height 0.8)
+  '(mode-line-inactive :family "Roboto Mono" :height 0.8))
 
-(setq doom-modeline-height 20)
+(setq doom-modeline-height 25)
 
 (setq org-directory "~/org/")
 (setq org-superstar-headline-bullets-list '("❖" "◉" "◈" "○" "⁘"))
