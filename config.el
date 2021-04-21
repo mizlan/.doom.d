@@ -71,3 +71,15 @@
                   :weight bold)))
 
 (blink-cursor-mode)
+(fringe-mode 8)
+
+(setq modus-themes-completions 'opinionated)
+(setq modus-themes-mode-line nil)
+
+(after! doom-modeline
+  (setq doom-modeline-enable-word-count nil
+        doom-modeline-buffer-encoding nil
+        doom-modeline-buffer-file-name-style 'file-name
+        line-number-mode nil
+        column-number-mode nil
+        size-indication-mode nil))
