@@ -70,6 +70,13 @@
       :n "A" #'notmuch-delete-all
       :n "F" #'notmuch-search-from-sender)
 
+(setq notmuch-saved-searches
+      '((:name "inbox"     :query "tag:inbox not tag:trash" :key "i")
+        (:name "flagged"   :query "tag:flagged"             :key "f")
+        (:name "sent"      :query "tag:sent"                :key "s")
+        (:name "drafts"    :query "tag:draft"               :key "d")
+        (:name "classroom" :query "tag:gc"                  :key "c")))
+
 (defun notmuch-search-from-sender ()
   (interactive)
   (notmuch-search (format "from:\"%s\"" (plist-get (notmuch-search-get-result) :authors))))
