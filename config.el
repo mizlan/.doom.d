@@ -94,8 +94,8 @@
       ;; populate buffer with full email text
       (call-process "notmuch" nil t nil "show" "--format=raw" thread-id)
       ;; call python script to parse text and perform unsubscribe
-      (call-process-region nil nil "python" nil t nil (expand-file-name "~/scripts/unsubscribe.py"))
-      ;; attempt?? to show the full text
+      (call-process-region nil nil "python" t '(t t) nil (expand-file-name "~/scripts/unsubscribe.py"))
+      ;; show output
       (message "%s" (buffer-string)))))
 
 (setq org-agenda-timegrid-use-ampm 1)
