@@ -68,7 +68,8 @@
       :map notmuch-search-mode-map
       :nv "d" #'+notmuch/search-delete
       :n "A" #'notmuch-delete-all
-      :n "F" #'notmuch-search-from-sender)
+      :n "F" #'notmuch-search-from-sender
+      :n "u" #'notmuch-unsubscribe)
 
 (setq notmuch-saved-searches
       '((:name "inbox"     :query "tag:inbox not tag:trash" :key "i")
