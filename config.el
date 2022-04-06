@@ -76,6 +76,8 @@
         (:name "flagged"   :query "tag:flagged"             :key "f")
         (:name "sent"      :query "tag:sent"                :key "s")
         (:name "drafts"    :query "tag:draft"               :key "d")
+        (:name "trash"     :query "tag:trash"               :key "t")
+        (:name "spam"      :query "tag:spam"                :key "x")
         (:name "classroom" :query "tag:gc"                  :key "c")))
 
 (defun notmuch-search-from-sender ()
