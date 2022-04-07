@@ -98,7 +98,7 @@
       ;; call python script to parse text and perform unsubscribe
       (call-process-region nil nil "python" t '(t t) nil (expand-file-name "~/scripts/unsubscribe.py"))
       ;; show output
-      (message "%s" (buffer-string)))))
+      (message "%s" (string-trim-right (buffer-string))))))
 
 (setq org-agenda-timegrid-use-ampm 1)
 
