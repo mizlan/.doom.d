@@ -106,3 +106,5 @@
 (setq modus-themes-bold-constructs t)
 (setq modus-themes-completions 'moderate)
 (setq modus-themes-region 'bg-only)
+
+(setq evil-snipe-scope 'visible)
