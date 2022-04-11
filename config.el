@@ -101,6 +101,7 @@
       (message "%s" (string-trim-right (buffer-string))))))
 
 (setq org-agenda-timegrid-use-ampm 1)
+(setq org-hide-emphasis-markers t)
 
 (setq modus-themes-bold-constructs t)
 (setq modus-themes-completions 'moderate)
